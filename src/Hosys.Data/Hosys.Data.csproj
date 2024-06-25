@@ -7,11 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Contracts\" />
+      <ProjectReference Include="..\Hosys.Commons\Hosys.Commons.csproj" />
     </ItemGroup>
 
 </Project>
