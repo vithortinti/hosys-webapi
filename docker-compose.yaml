@@ -1,0 +1,21 @@
+services:
+  database:
+    image: postgres:latest
+    container_name: postgres_hosys
+    ports:
+      - 54321:5432
+    environment:
+      POSTGRES_USER: hosys
+      POSTGRES_PASSWORD: hosys
+      POSTGRES_DB: hosys
+    networks:
+      hosys_network:
+        ipv4_address: 172.16.0.100
+
+networks:
+  hosys_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.0.0/24
+          gateway: 172.16.0.1
